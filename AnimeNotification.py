@@ -15,25 +15,15 @@ animes = soup.find_all(class_='sContainer')
 for anime in animes:
     nome = anime.find('div', class_='EpisodiosDesc').text.strip()
     data = anime.find('div', class_='EpisodiosData').text.strip()
-    print(nome)
-    print(data)
-    print()
-
-"""  
-try:
-   page
-
-except:
-    print("Por favor! Verifique a conexão de internet")
+hoje = nome + '\n' + data
 
 if (page != None):
 
     while(True):
         notification.notify(
             title = 'Lançamento',
-            message = anime,
+            message = hoje,
             app_icon = 'E:/GitKraekn Local Repo/PythonDeskNotification/J.ico',
-            timeout = 60
+            timeout = 10
         )
         time.sleep(60*60*1)
-"""
