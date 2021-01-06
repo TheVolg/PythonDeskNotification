@@ -1,5 +1,5 @@
 import datetime #pegar data atual
-import time
+import time #pegar o tempo transcorrido?
 import requests #pegar os dados da página de internet
 import pandas as pd #guardar dados
 from bs4 import BeautifulSoup #pegar dados de HTML e XML
