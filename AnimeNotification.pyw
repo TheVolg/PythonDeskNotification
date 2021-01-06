@@ -21,7 +21,7 @@ with open('comparativo.txt') as json_file:
     comparacao = json.load(json_file)
 
 if (nome != comparacao):
-    
+
     while(True):
 
         notification.notify(
@@ -33,5 +33,6 @@ if (nome != comparacao):
         with open('comparativo.txt', 'w') as outfile:
             json.dump(nome, outfile, ensure_ascii=False)
         time.sleep(60*1)
+
 else:
      time.sleep(60*1)
