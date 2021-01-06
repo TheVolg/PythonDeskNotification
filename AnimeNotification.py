@@ -18,7 +18,7 @@ for anime in animes:
 hoje = nome + '\n' + data
 
 if (page != None):
-
+    page
     while(True):
         notification.notify(
             title = 'Lançamento',
