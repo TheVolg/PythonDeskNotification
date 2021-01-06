@@ -21,7 +21,6 @@ with open('comparativo.txt') as json_file:
     comparacao = json.load(json_file)
 
 if (nome != comparacao):
-
     
     while(True):
 
