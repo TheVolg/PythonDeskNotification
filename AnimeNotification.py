@@ -1,10 +1,10 @@
 import datetime #pegar data atual
 import time #pegar o tempo transcorrido?
 import requests #pegar os dados da página de internet
-import pandas as pd #guardar dados
 from bs4 import BeautifulSoup #pegar dados de HTML e XML
 from plyer import notification #notificação no pc
 
+page = None
 URL = 'https://animesonehd.xyz'
 page = requests.get(URL)
 
@@ -19,21 +19,21 @@ for anime in animes:
     print(data)
     print()
 
-lancamento = None
+"""  
 try:
-    page
+   page
 
 except:
     print("Por favor! Verifique a conexão de internet")
 
-if (lancamento != None):
-    data = lancamento.json(['Sucesso'])
+if (page != None):
 
     while(True):
         notification.notify(
             title = 'Lançamento',
             message = anime,
-            app_icon = 'Paomedia-Small-N-Flat-Bell.ico',
+            app_icon = 'E:/GitKraekn Local Repo/PythonDeskNotification/J.ico',
             timeout = 60
         )
         time.sleep(60*60*1)
+"""
