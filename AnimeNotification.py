@@ -32,7 +32,7 @@ if (lancamento != None):
     while(True):
         notification.notify(
             title = 'Lançamento',
-            message = '{nome}\n{data}',
+            message = anime,
             app_icon = 'Paomedia-Small-N-Flat-Bell.ico',
             timeout = 60
         )
