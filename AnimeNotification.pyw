@@ -1,10 +1,10 @@
 import datetime #pegar data atual
 import time #pegar o tempo transcorrido?
 import requests #pegar os dados da página de internet
+import json #ler/gravar json
 from bs4 import BeautifulSoup #pegar dados de HTML e XML
 from plyer import notification #notificação no pc
 
-page = None
 URL = 'https://animesonehd.xyz'
 page = requests.get(URL)
 
@@ -15,15 +15,24 @@ animes = soup.find_all(class_='sContainer')
 for anime in animes:
     nome = anime.find('div', class_='EpisodiosDesc').text.strip()
     data = anime.find('div', class_='EpisodiosData').text.strip()
-hoje = nome + '\n' + data
+novo = nome + '\n' + data
 
-if (page != None):
-    page
+with open('comparativo.txt') as json_file:
+    comparacao = json.load(json_file)
+
+if (nome != comparacao):
+
+    
     while(True):
+
         notification.notify(
             title = 'Lançamento',
-            message = hoje,
+            message = novo,
             app_icon = 'E:/GitKraekn Local Repo/PythonDeskNotification/J.ico',
             timeout = 10
         )
-        time.sleep(60*60*1)
+        with open('comparativo.txt', 'w') as outfile:
+            json.dump(nome, outfile, ensure_ascii=False)
+        time.sleep(60*1)
+else:
+     time.sleep(60*1)
