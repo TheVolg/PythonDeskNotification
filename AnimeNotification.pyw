@@ -32,7 +32,5 @@ if (nome != comparacao):
         )
         with open('comparativo.txt', 'w') as outfile:
             json.dump(nome, outfile, ensure_ascii=False)
-        time.sleep(60*1)
+        time.sleep(5)
 
-else:
-     time.sleep(60*1)
