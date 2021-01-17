@@ -13,5 +13,4 @@ Conhecimentos adquiridos durante a construção:
 -Tratamento do HTML/XML obtido através do Web Scrapping
 -JSON ler/escrever
 -Notificação Windows
-
-#teste commmit
+#teste2 
